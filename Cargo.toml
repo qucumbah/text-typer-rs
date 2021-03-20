@@ -8,3 +8,9 @@ edition = "2018"
 
 [dependencies]
 winapi = { version = "0.3.6", features = ["winuser"] }
+
+[profile.release]
+opt-level = 'z'
+lto = true
+codegen-units = 1
+panic = 'abort'
